@@ -1,0 +1,43 @@
+.special-card {
+    width: 23rem;
+    height: 37rem;
+    background-color: #495E57;
+    color: white;
+    padding: .5rem;
+    justify-items: center;
+}
+
+.special-image {
+    width: 23rem;
+    height: 16rem;
+}
+
+.dish-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.special-name {
+    font-size: 1.5rem;
+}
+
+.special-price {
+    color: #F4CE14;
+    font: 1.3rem;
+    font-style: italic;
+    font-weight: bold;
+    align-self: center;
+
+}
+
+.delivery-button {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.delivery-icon {
+    height: 2rem;
+    width: 3rem;
+    align-self: center;
+}

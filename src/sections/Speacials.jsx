@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
 import SpecialCard from '../components/SpecialCard';
 import { specials } from '../testData';
+import './Specials.css';
 
 const Speacials = () => {
   return (
-    <section>
+    <section className='specials-section'>
     
       {
         specials.map((special) => (
