@@ -4,13 +4,22 @@
     background-color: #495E57;
     color: white;
     padding: .5rem;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .special-image {
     width: 23rem;
     height: 16rem;
+    object-fit: cover;
 }
+
+.special-content {
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    flex-grow: 1;
+  }
 
 .dish-header {
     display: flex;
@@ -30,10 +39,16 @@
 
 }
 
+.special-description {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
 .delivery-button {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    justify-self: center;
 }
 
 .delivery-icon {
