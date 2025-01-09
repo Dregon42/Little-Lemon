@@ -14,7 +14,7 @@ export const specials = [
     },
     {
         name: 'Grilled Flounder',
-        image: 'src/assets/Grilled_Fish.jpg',
+        image: 'src/assets/entree.jpg',
         price: '$24.99',
         description: 'Succulent grilled fish: healthy, flavorful, and perfectly charred goodness!"'
     },
@@ -25,21 +25,21 @@ export const testimonials = [
     {
         name: 'Karyn',
         picture: 'src/assets/customers/alex.jpg',
-        quote: 'The service is amazing!'
+        quote: `"The service is amazing!"`
     },
     {
         name: 'Fayaz',
         picture: 'src/assets/customers/fayaz.jpg',
-        quote: 'The service is amazing!'
+        quote: `"The service is amazing!"`
     },
     {
         name: 'Ian',
         picture: 'src/assets/customers/ian.jpg',
-        quote: 'The service is amazing!'
+        quote: `"The service is amazing!"`
     },
     {
         name: 'Lore',
         picture: 'src/assets/customers/michael.jpg',
-        quote: 'The service is amazing!'
+        quote: `"The service is amazing!"`
     },
 ];

@@ -1,0 +1,7 @@
+.reviews-section {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 2.5rem;
+    gap: 5rem;
+    background-color: #495E57;
+}
