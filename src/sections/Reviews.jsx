@@ -8,7 +8,7 @@ const Reviews = () => {
     <section className='reviews-section'>
       {
         testimonials.map((review) => (
-          <ReviewCard review={review} />
+          <ReviewCard review={review} key={review.name} />
         ))
       }
     </section>
