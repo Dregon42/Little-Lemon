@@ -1,0 +1,35 @@
+nav {
+    width: 95%;
+    height: 7.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 1.5rem;
+}
+
+.logo {
+    width: 14.9rem;
+    height: 4.25rem;
+
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 52.25rem;
+    height: 3.13rem;
+}
+
+li {
+    font-size: 1.5rem;
+    font-weight:600;
+    align-self: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    align-self: center;
+}
