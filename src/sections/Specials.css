@@ -1,4 +1,18 @@
-.specials-section {
+.specials-container {
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 2rem 3rem;
+}
+
+.special-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
 }

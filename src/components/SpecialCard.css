@@ -1,5 +1,5 @@
 .special-card {
-    width: 23rem;
+    width: 20rem;
     height: 37rem;
     background-color: #495E57;
     color: white;
@@ -7,12 +7,14 @@
     display: flex;
     flex-direction: column;
     border: 1rem;
+    border-radius: 1rem;
 }
 
 .special-image {
-    width: 23rem;
+    width: 20rem;
     height: 16rem;
     object-fit: cover;
+    border-radius: 1rem;
 }
 
 .special-content {
