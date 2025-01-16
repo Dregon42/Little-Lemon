@@ -24,12 +24,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto 0rem;
+    background-color: white;
+    opacity: 60%;
 }
 
 .footer-image {
-    width: 6rem ;                 
+    width: 20rem ;                 
     height: auto;
-    object-fit: contain;          
+    object-fit: fill;          
 }
 .footer-list {
     list-style: none;             
@@ -48,7 +51,11 @@
 }
 
 .col-three p {
-    margin: 0.5rem 0;             /* Adds spacing between address lines */
+    margin: 0.5rem 0;             
+}
+
+.col-three div h5 {
+    margin: .5rem;
 }
 
 .col-four {
@@ -61,5 +68,4 @@
 .col-four a {
     text-decoration: none;
     color: white;
-    font-size: 1rem;
 }

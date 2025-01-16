@@ -32,10 +32,11 @@ const Footer = () => {
       <div className='col-three'>
         <h4>Contact</h4>
         <div>
-
+          <h5>Phone</h5>
+          <p>123-456-7890</p>
         </div>
         <div>
-          <p>Address</p>
+          <h5>Address</h5>
           <p>1243 Main Street, Underland, MI 89456</p>
         </div>
       </div>
