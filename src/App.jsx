@@ -1,9 +1,5 @@
 import { Navbar } from "./components/Navbar";
-import Footer from "./sections/Footer";
-import Hero from "./sections/Hero";
-import Reviews from "./sections/Reviews";
-import Speacials from "./sections/Speacials";
-import Highlights from "./sections/Highlights";
+import { Home } from "./pages/Home";
 
 
 function App() {
@@ -12,11 +8,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      <Hero />
-      <Speacials />
-      <Reviews />
-      <Highlights />
-      <Footer />
+      <Home />
     </div>
   )
 }
