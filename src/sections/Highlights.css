@@ -22,10 +22,13 @@
     width: 50%;
     position: relative;
     gap: .5rem;
+    
 }
 
 .highlights-textContainer > h3 {
     color: #495E57;
+    mix-blend-mode: difference;
+    z-index: 1;
 }
 .highlight-subtext {
     font-size: 1.8rem;
