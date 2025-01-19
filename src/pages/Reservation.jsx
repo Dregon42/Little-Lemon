@@ -9,6 +9,10 @@ export const Reservation = () => {
           <ReservationForm />
         </div>
         <div>
+          <div className='reserve-heading'>
+            <h1 className='main-heading'>Book Now!</h1>
+            <p className='sub-heading'>4 Star Experience</p>
+          </div>
           <img src="src/assets/entree.jpg" alt="" />
         </div>
     </section>
