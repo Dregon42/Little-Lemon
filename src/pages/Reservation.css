@@ -1,0 +1,20 @@
+.reservation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.reservation-container > div {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+img {
+    width: 23rem;
+    height: auto;
+}
