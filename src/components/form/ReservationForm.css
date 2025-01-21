@@ -28,9 +28,22 @@ input {
     width: 100%;
     font-size: large;
     font-weight: 500;
+    border-radius: .5rem;
+}
+
+span {
+    color: red;
 }
 
 select {
     height: 2.5rem;
     width: 6rem;
+}
+
+.submitButton {
+    background-color: #F4CE14;
+    width: 10.8rem; 
+    height: 3.8rem;
+    border-radius: 1rem;
+    font-size: 1.25rem;
 }

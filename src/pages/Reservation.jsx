@@ -1,5 +1,5 @@
 import React from 'react'
-import { ReservationForm } from '../components/ReservationForm';
+import { ReservationForm } from '../components/form/ReservationForm';
 import './Reservation.css';
 
 export const Reservation = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import SpecialCard from '../components/SpecialCard';
+import SpecialCard from '../components/specials/SpecialCard';
 import { specials } from '../testData';
 import './Specials.css';
 

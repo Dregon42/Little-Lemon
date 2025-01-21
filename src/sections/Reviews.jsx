@@ -1,6 +1,6 @@
 import React from 'react';
 import { testimonials } from '../testData';
-import { ReviewCard } from '../components/ReviewCard';
+import { ReviewCard } from '../components/reviews/ReviewCard';
 import './Reviews.css';
 
 const Reviews = () => {

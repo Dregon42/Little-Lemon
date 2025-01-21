@@ -3,7 +3,7 @@ import './ReservationForm.css';
 import { useForm } from 'react-hook-form';
 
 export const ReservationForm = () => {
-    const {register, handleSubmit, watch, formState: {errors}} = useForm();
+    const {register, handleSubmit, formState: {errors}} = useForm();
 
     const onSubmit = (data) => {
         console.log(data)
@@ -63,8 +63,9 @@ export const ReservationForm = () => {
                         aria-required="true" 
                         placeholder='MM/DD/YYYY'
                         {...register('date', {required: 'Required'})}
-                        aria-invalid
+                        aria-invalid={errors.date ? 'true' : 'false'}
                     />
+                    {errors.date && <span role='alert'>{errors.date.message}</span>}
                 </div>
             </div>
             <div className='form-container'>
@@ -86,9 +87,9 @@ export const ReservationForm = () => {
                     <select 
                         id='occassion' 
                         name='occassion' 
-                        {...register('occassion', { required: 'Required', })}
+                        {...register('occassion')}
                     >
-                        <option value="" disabled selected></option>
+                        <option value="" disabled></option>
                         <option value="Anniversary">Anniversary</option>
                         <option value="Engagement">Engagement</option>
                         <option value="Birthday">Birthday</option>
@@ -101,13 +102,13 @@ export const ReservationForm = () => {
                         name='seating' 
                         {...register('seating')}
                     >
-                        <option value="" disabled selected></option>
+                        <option value="" disabled></option>
                         <option value="Patio">Patio</option>
                         <option value="Interior">Interior</option>
                     </select>
                 </div>
             </div>
-            <input type="submit" />
+            <input className='submitButton' type="submit" />
         </form>
     )
 }
