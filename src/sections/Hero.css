@@ -37,6 +37,10 @@ button {
     font-size: 1.25rem;
 }
 
+button:hover {
+    box-shadow:  0 0 10px 5px #F4CE14;
+}
+
 .image-container {
     flex: 1;
     align-items: center;
@@ -50,3 +54,4 @@ button {
     height: 35rem;
     object-fit: cover;
 }
+

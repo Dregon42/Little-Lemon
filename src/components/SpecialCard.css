@@ -10,6 +10,11 @@
     border-radius: 1rem;
 }
 
+.special-card:hover {
+    animation: rescale 1s ease-in-out forwards ;
+
+}
+
 .special-image {
     width: 20rem;
     height: 16rem;
@@ -58,4 +63,18 @@
     height: 2rem;
     width: 3rem;
     align-self: center;
+}
+
+/* Animation */
+
+@keyframes rescale {
+    from {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 transparent;
+    }
+
+    to {
+        transform:scale(1.12);
+        box-shadow: 0 0 1.5rem 1rem rgba(0, 0, 0, 0.5);
+    }
 }
