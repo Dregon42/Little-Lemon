@@ -1,29 +1,18 @@
 import React, { useState } from 'react';
-import './ReservationForm.css'
+import './ReservationForm.css';
+import { useForm } from 'react-hook-form';
 
 export const ReservationForm = () => {
-    const [data, setData] = useState({
-        fullName:'',
-        phone: '',
-        email:'',
-        date: '',
-        occasion: '',
-        seating: '',
-        party: '',
-    });
+    const {register, handleSubmit, watch, formState: {errors}} = useForm();
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setData((prevData) => ({ ...prevData, [name]: value }));
-    };
+    const onSubmit = (data) => {
+        console.log(data)
+    }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log('Form submitted:', data);
-    };
+    
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit(onSubmit)}>
             <div className='form-container'>
                 <div>
                     <label htmlFor="fullName" autoFocus >Name *</label>
@@ -31,11 +20,12 @@ export const ReservationForm = () => {
                         type="text" 
                         name='fullName'
                         id='fullName' 
-                        required 
                         aria-required="true" 
                         placeholder='Enter name'
-                        onChange={handleChange}
+                        {...register('fullName', { required: 'This field required' })}
+                        aria-invalid={errors.fullName ? 'true' : 'false'}
                     />
+                    {errors.fullName && <span role='alert'>{errors.fullName.message}</span>}
                 </div>
                 <div>
                     <label htmlFor="phone">Phone Number</label>
@@ -43,13 +33,11 @@ export const ReservationForm = () => {
                         type='text' 
                         id='phone' 
                         name='phone'
-                        required 
-                        aria-required="true" 
-                        minLength={10} 
-                        maxLength={10} 
                         placeholder='Enter number'
-                        onChange={handleChange}
+                        {...register('phone', {required: 'This field required', minLength: 10})}
+                        aria-invalid={errors.phone ? 'true' : 'false'}
                     />
+                    {errors.phone && <span role='alert'>{errors.phone.message}</span>}
                 </div>
             </div>
             <div className='form-container'>
@@ -59,11 +47,12 @@ export const ReservationForm = () => {
                         type="email" 
                         id='email' 
                         name='email'
-                        required 
                         aria-required="true" 
                         placeholder='Enter email'
-                        onChange={handleChange}
+                        {...register('email', { required: 'This field required'})}
+                        aria-invalid={errors.email ? 'true' : 'false'}
                     />
+                    {errors.email && <span role='alert'>{errors.email.message}</span>}
                 </div>
                 <div>
                     <label htmlFor="date">Date</label>
@@ -71,10 +60,10 @@ export const ReservationForm = () => {
                         type='date' 
                         id='date' 
                         name='date'
-                        required 
                         aria-required="true" 
                         placeholder='MM/DD/YYYY'
-                        onChange={handleChange}
+                        {...register('date', {required: 'Required'})}
+                        aria-invalid
                     />
                 </div>
             </div>
@@ -85,37 +74,40 @@ export const ReservationForm = () => {
                         type='number' 
                         id='party' 
                         name='party'
-                        required 
-                        aria-required="true" 
-                        min={2} 
-                        max={8}
-                        onChange={handleChange} 
+                        {...register('party', { required: 'This field is required',min: 2, max: 10})}
+                        aria-invalid={errors.party ? 'true' : 'false'}
                     />
+                    {errors.party && <span role='alert'>{errors.party.message}</span>}
                 </div>
             </div>
             <div className='form-container'>
                 <div>
+                    <label htmlFor="occassion">Occassion</label>
                     <select 
-                        id='occasion' 
-                        name='occasion' 
-                        onChange={handleChange}
+                        id='occassion' 
+                        name='occassion' 
+                        {...register('occassion', { required: 'Required', })}
                     >
-                        <option value="Occasion" disabled selected></option>
-                        <option value="option1">Option 1</option>
-                        <option value="option2">Option 2</option>
-                        <option value="option3">Option 3</option>
-                        <option value="option4">Option 4</option>
+                        <option value="" disabled selected></option>
+                        <option value="Anniversary">Anniversary</option>
+                        <option value="Engagement">Engagement</option>
+                        <option value="Birthday">Birthday</option>
                     </select>
                 </div>
                 <div>
-                    <select id='seating' name='seating' onChange={handleChange}>
-                        <option value="" disabled selected>Seating</option>
+                    <label htmlFor="seating">Seating</label>
+                    <select 
+                        id='seating' 
+                        name='seating' 
+                        {...register('seating')}
+                    >
+                        <option value="" disabled selected></option>
                         <option value="Patio">Patio</option>
                         <option value="Interior">Interior</option>
                     </select>
                 </div>
             </div>
-            <button type='submit'>Reserve A Table</button>
+            <input type="submit" />
         </form>
     )
 }
