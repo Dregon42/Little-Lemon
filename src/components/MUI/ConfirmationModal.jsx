@@ -1,16 +1,15 @@
-import { useState } from 'react';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import './ConfirmationModal.css'
 
 const style = {
     position: 'absolute',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 400,
-    bgcolor: 'background.paper',
+    width: 600,
+    bgcolor: '#495E57',
     border: '2px solid #000',
     boxShadow: 24,
     p: 4,
@@ -23,21 +22,21 @@ const ConfirmationModal = ({ open, handleOpen, handleClose}) => {
     
     return (
         <div>
-            <Button onClick={handleOpen}>
-                <input className='submitButton' type="submit" />
-            </Button>
+        
+            <input onClick={handleOpen} className='submitButton' type="submit" value={'Reserve'} />
+            
             <Modal
                 open={open}
                 onClose={handleClose}
-                aria-labelledby="modal-modal-title"
-                aria-describedby="modal-modal-description"
+                aria-labelledby="Confirmation"
+                aria-describedby="Popup to to confirm reservation"
             >
-                <Box sx={style}>
-                <Typography id="modal-modal-title" variant="h6" component="h2">
-                    Text in a modal
+                <Box borderRadius={'1rem'} sx={style}>
+                <Typography id="confirmation-header" variant="h6" component="h2" color={'#F4CE14'} fontSize={'2rem'} fontWeight={700}>
+                    We look forward to serving you!
                 </Typography>
-                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                    Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                <Typography id="confirmation-text" fontSize={'1.5rem'} sx={{ mt: 2 }}>
+                    You will receive a day of reminder text. 
                 </Typography>
                 </Box>
             </Modal>
