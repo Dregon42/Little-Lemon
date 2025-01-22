@@ -1,9 +1,20 @@
 import React, { useState } from 'react';
 import './ReservationForm.css';
 import { useForm } from 'react-hook-form';
+import ConfirmationModal from '../MUI/ConfirmationModal';
 
 export const ReservationForm = () => {
     const {register, handleSubmit, formState: {errors}} = useForm();
+
+    const [open, setOpen] = useState(false);
+
+    const handleOpen = () => {
+        setOpen(true);
+    }; 
+
+    const handleClose = () => {
+        setOpen(false);
+    };
 
     const onSubmit = (data) => {
         console.log(data)
@@ -108,7 +119,8 @@ export const ReservationForm = () => {
                     </select>
                 </div>
             </div>
-            <input className='submitButton' type="submit" />
+            <ConfirmationModal open={open} handleOpen={handleOpen} handleClose={handleClose} />
+            {/* <input className='submitButton' type="submit" /> */}
         </form>
     )
-}
+};
