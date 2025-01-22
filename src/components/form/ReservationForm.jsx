@@ -119,8 +119,7 @@ export const ReservationForm = () => {
                     </select>
                 </div>
             </div>
-            <ConfirmationModal open={open} handleOpen={handleOpen} handleClose={handleClose} />
-            {/* <input className='submitButton' type="submit" /> */}
+            <ConfirmationModal  open={open} handleOpen={handleOpen} handleClose={handleClose} />
         </form>
     )
 };
