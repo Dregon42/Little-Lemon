@@ -1,5 +1,5 @@
 form {
-    padding: 1.5rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -39,7 +39,8 @@ input, select {
 
 
 span {
-    color: #d9534f;;
+    color: #d9534f;
+    width: 12rem;
 }
 
 input:focus, select:focus {
@@ -61,4 +62,5 @@ input:focus, select:focus {
     height: 3.8rem;
     border-radius: 1rem;
     font-size: 1.25rem;
+    font-weight: 700;
 }
