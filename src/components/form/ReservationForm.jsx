@@ -57,7 +57,7 @@ export const ReservationForm = () => {
                     {errors.fullName && <span role='alert'>{errors.fullName.message}</span>}
                 </div>
                 <div>
-                    <label htmlFor="phone">Phone Number</label>
+                    <label htmlFor="phone">Phone Number*</label>
                     <input 
                         type='text' 
                         id='phone' 
@@ -74,7 +74,7 @@ export const ReservationForm = () => {
             </div>
             <div className='form-container'>
                 <div>
-                    <label htmlFor="email">Email *</label>
+                    <label htmlFor="email">Email*</label>
                     <input 
                         type="email" 
                         id='email' 
@@ -93,7 +93,7 @@ export const ReservationForm = () => {
                     <span role='alert'>{errors.email?.message}</span>
                 </div>
                 <div>
-                    <label htmlFor="date">Date</label>
+                    <label htmlFor="date">Date*</label>
                     <input 
                         type='date' 
                         id='date' 
@@ -158,7 +158,10 @@ export const ReservationForm = () => {
                     </select>
                 </div>
             </div>
-            <ConfirmationModal reservation={reservation}  open={open} handleOpen={handleOpen} handleClose={handleClose} />
+            <button type='submit' className='submitButton'>
+                Reserve
+            </button>
+            {/* <ConfirmationModal reservation={reservation}  open={open} handleOpen={handleOpen} handleClose={handleClose} /> */}
         </form>
     )
 };

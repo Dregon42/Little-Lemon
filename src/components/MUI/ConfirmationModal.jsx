@@ -1,7 +1,6 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import './ConfirmationModal.css'
 
 const style = {
     position: 'absolute',
@@ -15,7 +14,7 @@ const style = {
     p: 4,
 };
 
-const ConfirmationModal = ({ open, handleOpen, handleClose}) => {
+const ConfirmationModal = ({ open, handleOpen, handleClose, reservation}) => {
 
     
     
@@ -23,23 +22,33 @@ const ConfirmationModal = ({ open, handleOpen, handleClose}) => {
     return (
         <div>
         
-            <input onClick={handleOpen} className='submitButton' type="submit" value={'Reserve'} />
+            <button onClick={handleOpen} type='submit' className='submitButton'>
+                Reserve
+            </button>
+            {/* <input onClick={handleOpen}  className='submitButton' type="submit" value={'Reserve'} /> */}
             
-            <Modal
-                open={open}
-                onClose={handleClose}
-                aria-labelledby="Confirmation"
-                aria-describedby="Popup to to confirm reservation"
-            >
-                <Box borderRadius={'1rem'} sx={style}>
-                <Typography id="confirmation-header" variant="h6" component="h2" color={'#F4CE14'} fontSize={'2rem'} fontWeight={700}>
-                    We look forward to serving you!
-                </Typography>
-                <Typography id="confirmation-text" fontSize={'1.5rem'} sx={{ mt: 2 }}>
-                    You will receive a day of reminder text. 
-                </Typography>
-                </Box>
-            </Modal>
+            {
+                reservation === 0 ?  (
+
+                    <Modal
+                        open={open}
+                        onClose={handleClose}
+                        aria-labelledby="Confirmation"
+                        aria-describedby="Popup to to confirm reservation"
+                    >
+                        <Box borderRadius={'1rem'} sx={style}>
+                        <Typography id="confirmation-header" variant="h6" component="h2" color={'#F4CE14'} fontSize={'2rem'} fontWeight={700}>
+                            We look forward to serving you!
+                        </Typography>
+                        <Typography id="confirmation-text" fontSize={'1.5rem'} sx={{ mt: 2 }}>
+                            You will receive a day of reminder text. 
+                        </Typography>
+                        </Box>
+                    </Modal>
+                )
+                :
+                null
+            }
         </div>
     )
 };
