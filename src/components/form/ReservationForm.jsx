@@ -7,11 +7,11 @@ import ConfirmationModal from '../MUI/ConfirmationModal';
 import { data } from 'react-router';
 
 const schema = yup.object({
-    fullName: yup.string().required(),
-    phone: yup.string().required(),
-    email: yup.string().required().email(),
-    // date: yup.date().required().min(new Date(2025, 0, 27)).max(new Date(2025, 1, 1).e),
-    party: yup.number().positive().required(),
+    fullName: yup.string().required('Name is required'),
+    phone: yup.string().required('Phone number is required').min(10, 'Must be 10 digit phone number'),
+    email: yup.string().required('Email required').email('Must be valid email'),
+    date: yup.date().required('Date required').min(new Date(2025, 0, 27), 'Must Book 1/27/2025 thru 2/12025').max(new Date(2025, 1, 1), 'Must Book 1/27/2025 thru 2/1/2025'),
+    party: yup.number().positive('Should be positive number').required('Party size required'),
     occassion: yup.string().notRequired(),
     seating: yup.string().notRequired()
 }).required()
@@ -51,7 +51,7 @@ export const ReservationForm = () => {
                         id='fullName' 
                         aria-required="true" 
                         placeholder='Enter name'
-                        {...register('fullName', { required: 'Your name is required' })}
+                        {...register('fullName')}
                         aria-invalid={errors.fullName ? 'true' : 'false'}
                     />
                     {errors.fullName && <span role='alert'>{errors.fullName.message}</span>}
@@ -81,13 +81,7 @@ export const ReservationForm = () => {
                         name='email'
                         aria-required="true" 
                         placeholder='Enter email'
-                        {...register('email', { required: 'Email Required',
-                            pattern: {
-                                value:  /^[\w\-\.]+@([\w-]+\.)+[\w-]{2,}$/,
-                                message: 'Invalid email'
-                            }
-
-                        })}
+                        {...register('email')}
                         aria-invalid={errors.email ? 'true' : 'false'}
                     />
                     <span role='alert'>{errors.email?.message}</span>
@@ -100,19 +94,7 @@ export const ReservationForm = () => {
                         name='date'
                         aria-required="true" 
                         placeholder='MM/DD/YYYY'
-                        {...register('date', {
-                            required: 'Required',
-                            validate: {
-                                inRange: (day) => {
-                                    const selectedDate = new Date(day);
-                                    const minDate = new Date("01-27-2025");
-                                    const maxDate = new Date("02-01-2025");
-                                    return selectedDate >= minDate && selectedDate <= maxDate || 
-                                        'Date must be between 2025-01-27 and 2025-02-01';
-                                }
-                            }
-                            
-                        })}
+                        {...register('date')}
                         aria-invalid={errors.date ? 'true' : 'false'}
                     />
                     <span role='alert'>{errors.date?.message}</span>

@@ -24,21 +24,25 @@ export const specials = [
 export const testimonials = [
     {
         name: 'Karyn',
+        rating: [1, 1, 1, 1],
         picture: 'src/assets/customers/alex.jpg',
         quote: `"The service is amazing!"`
     },
     {
         name: 'Fayaz',
+        rating: [1, 1, 1, 1],
         picture: 'src/assets/customers/fayaz.jpg',
         quote: `"The service is amazing!"`
     },
     {
         name: 'Ian',
+        rating: [1, 1, 1, 1],
         picture: 'src/assets/customers/ian.jpg',
         quote: `"The service is amazing!"`
     },
     {
         name: 'Lore',
+        rating: [1, 1, 1, .5],
         picture: 'src/assets/customers/michael.jpg',
         quote: `"The service is amazing!"`
     },
