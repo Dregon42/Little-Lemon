@@ -13,10 +13,10 @@ const SpecialCard = ({special}) => {
           </div>
           <p className='special-description'>{special.description}</p>
         </figcaption>
-        <button type='btn' className='delivery-button'>
+        <div className='delivery-button'>
           <p>Order a Delivery</p>
           <img className='delivery-icon' src="src/assets/delivery.png" alt="Delivery Truck" />
-        </button>
+        </div>
       </div>
     </figure>
   )  

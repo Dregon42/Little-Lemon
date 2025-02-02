@@ -19,7 +19,6 @@ const Speacials = () => {
           }
         </div>
       </div>
-    
     </section>
   )
 }
