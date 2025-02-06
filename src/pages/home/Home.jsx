@@ -12,8 +12,8 @@ export const Home = () => {
     <section className='home-page'>
       <Hero />
       <Speacials />
-      <Reviews />
-      {/* <Highlights />
+      {/* <Reviews />
+      <Highlights />
       <Footer /> */}
     </section>
   )

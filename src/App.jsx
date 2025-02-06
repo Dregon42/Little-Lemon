@@ -1,6 +1,6 @@
 import { Navbar } from "./components/nav/Navbar";
-import { Home } from "./pages/Home";
-import { Reservation } from "./pages/Reservation";
+import { Home } from "./pages/home/Home";
+import { Reservation } from "./pages/reservation/Reservation";
 import { BrowserRouter, Routes, Route } from "react-router";
 
 
