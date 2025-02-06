@@ -1,8 +1,9 @@
 .reviews-section {
     display: flex;
     justify-content: center;
-    padding: 3rem 2.5rem;
-    gap: 2rem;
+    width: 100%;
+    padding: 3rem 0;
+    gap: 3rem;
     background-color: #495E57;
 }
 
@@ -10,9 +11,10 @@
     .reviews-section {
         flex-direction: column;
         width: 100%;
-        padding: 3rem 0;
+        padding: 5rem 0;
         justify-content: center;
         align-items: center;
         border-radius: 1rem;
+        margin: 3rem 0;
     }
 }
