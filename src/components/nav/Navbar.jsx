@@ -6,29 +6,22 @@ import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 
 export const Navbar = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(true);
     const [isMobile, setIsMobile] = useState(false)
 
     useEffect(() => {
 
-        const handleResize = () => {
+        if (window.innerWidth <= 496) {
+            setMenuOpen(false); 
+            setIsMobile(true);
+        } else {
+            setIsMobile(false)
+            setMenuOpen(true)
+        }
 
-            if (window.innerWidth < 496 ) {
-                setIsMobile(true);
-            } else {
-                setIsMobile(false)
-            };
 
-            if (isMobile) {
-                setMenuOpen(!menuOpen);
-            } else {
-                setMenuOpen(true);
-            }
-        };
 
-        handleResize();
-
-    }, []);
+    },[])
     
 
 
@@ -41,15 +34,20 @@ export const Navbar = () => {
                 <img className='logo' src='src/assets/LL_Logo.jpg' alt="Little Lemon Logo" />
             </Link>
 
-            { isMobile && (
+            {
+               isMobile == true ? (
+                    <button className='menu-button' onClick={() => setMenuOpen(!menuOpen)}>
+                        <FontAwesomeIcon icon={menuOpen ? faXmark : faBars} />
+                    </button>
 
-                <button className='menu-button' onClick={() => setMenuOpen(!menuOpen)}>
-                    <FontAwesomeIcon icon={menuOpen ? faXmark : faBars} />
-                </button>
-            )}
+                ) : null
+            }
+
+           
+        
 
             {
-               ( menuOpen || !isMobile) && (
+               menuOpen  && (
                     <ul className='nav-list'>
                         <li className='nav-item' >
                             <Link className='item' to="#">About</Link>

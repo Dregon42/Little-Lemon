@@ -8,7 +8,7 @@ const Speacials = () => {
     <section className='specials-section'>
       <div className='specials-container'>
         <div className='special-text'>
-          <h3>Specials</h3>
+          <h3>Weekly Specials</h3>
           <button type="button">On the Menu</button>
         </div>
         <div className='cards-container'>
