@@ -5,9 +5,9 @@ const Footer = () => {
   return (
     <div className='footer-container'>
       <div className='col-one'>
-        <div className='footer-imageContainer'>
-          <img src="src/assets/LL_Logo.jpg" alt="" className='footer-image' />
-        </div>
+      
+          <img src="src/assets/logo-white.png" alt="" className='footer-logo' />
+        
       </div>
       <div className='col-two'>
         <h4>Links</h4>

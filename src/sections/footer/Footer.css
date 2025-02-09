@@ -1,11 +1,11 @@
 .footer-container {
     height: 12rem;
     display: flex;
-    flex-direction: row;
     justify-content: center; 
-    padding: 2rem 1rem;           
+    padding: 2rem .6rem;      
     background-color: #495E57;    
-    color: white;                 
+    color: white;  
+    width: 100%;               
 }
 
 .footer-container > div {
@@ -20,24 +20,27 @@
     margin: 0;
 }
 
-.footer-imageContainer {
+.col-one {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto 0rem;
-    background-color: white;
-    opacity: 60%;
 }
 
-.footer-image {
-    width: 20rem ;                 
-    height: auto;
-    object-fit: fill;          
+.footer-logo {
+    width: 8rem ;      
+    height: 10rem;
+          
 }
+
 .footer-list {
     list-style: none;             
     flex-direction: column;
-    width: 19rem;
+    width: 10rem;
+    height: fit-content;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    padding: 0;
 }
 
 .footer-item a {
@@ -69,3 +72,13 @@
     text-decoration: none;
     color: white;
 }
+
+@media (max-width: 496px) {
+    .footer-container {
+        flex-direction: column;
+        height:fit-content;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+};
