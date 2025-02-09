@@ -27,7 +27,7 @@
     flex-direction: column; 
     justify-content: space-between; 
     flex-grow: 1;
-    margin: 0 1rem;
+    margin: 0 .8rem;
 }
 
 .dish-header {

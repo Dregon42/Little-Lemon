@@ -1,9 +1,9 @@
 import React from 'react';
 import Hero from '../../sections/hero/Hero';
-import Speacials from '../../sections/Speacials';
+import Speacials from '../../sections/specials/Speacials';
 import Reviews from '../../sections/reviews/Reviews';
-import Highlights from '../../sections/Highlights';
-import Footer from '../../sections/Footer';
+import Highlights from '../../sections/highlights/Highlights';
+import Footer from '../../sections/footer/Footer';
 import './Home.css'
 
 
@@ -14,7 +14,7 @@ export const Home = () => {
       <Speacials />
       <Reviews />
       <Highlights />
-      {/* <Footer /> */}
+      <Footer />
     </section>
   )
 }
