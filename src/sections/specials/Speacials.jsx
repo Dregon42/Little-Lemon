@@ -1,6 +1,6 @@
 import React from 'react';
-import SpecialCard from '../components/specials/SpecialCard';
-import { specials } from '../testData';
+import SpecialCard from '../../components/specialsCard/SpecialCard';
+import { specials } from '../../testData.js';
 import './Specials.css';
 
 const Speacials = () => {
