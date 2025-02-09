@@ -5,6 +5,7 @@
     padding: 3rem 0;
     gap: 3rem;
     background-color: #495E57;
+    margin: 2rem 0;
 }
 
 @media (max-width: 496px) {

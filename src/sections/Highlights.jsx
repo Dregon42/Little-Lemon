@@ -12,10 +12,10 @@ const Highlights = () => {
             Nobis consequuntur atque ducimus sint qui aspernatur nostrum reprehenderit, 
             omnis ipsa veritatis id? Quisquam, cupiditate ullam.
         </p>
-        <div className='circle'></div>
       </div>
+      <div className='box'></div>
       <div className='highlightImage-container'>
-        <div className='highlight-box'></div>
+        <div className='circle'></div>
         <img className='highlight-image' src="src/assets/Grilled_Fish.jpg" alt="Grilled Fish" />
       </div>
     </section>
