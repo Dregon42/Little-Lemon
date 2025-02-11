@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -37,6 +37,31 @@
 img {
     width: 31.5rem;
     height: auto;
+}
+
+@media (max-width: 496px) {
+    .reservation-container {
+        flex-direction: column-reverse;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .reservation-container > div {
+        margin: 1rem 0;
+    }
+
+    .reserve-heading {
+        height: 10rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-heading {
+        font-size: 4rem;
+        height: 2rem;
+    }
 }
 
 

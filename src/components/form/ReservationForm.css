@@ -21,13 +21,13 @@ form {
 }
 
 label {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 600;
 }
 
 input, select {
     height: 2.7rem;
-    width: 100%;
+    width: fit-content;
     padding: 0.5rem;
     font-size: 1.3rem;
     font-weight: 500;
@@ -63,4 +63,14 @@ input:focus, select:focus {
     border-radius: 1rem;
     font-size: 1.25rem;
     font-weight: 700;
+}
+
+@media (max-width: 496px) {
+    form {
+        width: 100%;
+    }
+
+    form .form-container {
+        flex-direction: column;
+    }
 }

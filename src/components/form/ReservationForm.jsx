@@ -106,6 +106,7 @@ export const ReservationForm = () => {
                     <input 
                         type='number' 
                         id='party' 
+                        defaultValue={0}
                         name='party'
                         {...register('party', { required: 'This field is required',min: 2, max: 10})}
                         aria-invalid={errors.party ? 'true' : 'false'}
